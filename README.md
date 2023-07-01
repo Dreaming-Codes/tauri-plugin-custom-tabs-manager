@@ -27,4 +27,4 @@ As of now, our plugin is not published on https://crates.io/ due to a bug in the
 tauri-plugin-custom-tabs-manager = { git = "https://github.com/Dreaming-Codes/tauri-plugin-custom-tabs-manager"}
 ```
 
-[demoVideo.mp4](README_ASSETS%2FdemoVideo.mp4)
+https://github.com/Dreaming-Codes/tauri-plugin-custom-tabs-manager/assets/10401566/28e1248b-434a-4ce7-bfc1-37847bd18b77
