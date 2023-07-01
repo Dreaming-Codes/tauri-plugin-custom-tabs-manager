@@ -1,14 +1,18 @@
 [package]
 name = "tauri-plugin-custom-tabs-manager"
 version = "0.0.0"
-authors = [ "DreamingCodes" ]
+authors = ["DreamingCodes"]
 description = ""
 license = "MIT"
 license-file = "LICENSE"
 edition = "2021"
 rust-version = "1.65"
-exclude = ["/examples", "/node_modules"]
 links = "tauri-plugin-custom-tabs-manager"
+exclude = [
+    "/examples",
+    "/.idea",
+    "/.github",
+]
 
 [dependencies]
 tauri = { git = "https://github.com/simonhyll/tauri", branch = "feat/android-fixes" }
