@@ -3,7 +3,8 @@ name = "tauri-app"
 version = "0.0.0"
 description = "A Tauri App"
 authors = ["you"]
-license = ""
+license = "MIT"
+license-file = "../../../LICENSE"
 repository = ""
 edition = "2021"
 
