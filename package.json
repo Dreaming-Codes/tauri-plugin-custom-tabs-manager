@@ -1,0 +1,9 @@
+{
+  "name": "tauri-plugin-custom-tabs-manager-api",
+  "version": "0.0.0",
+  "author": "DreamingCodes",
+  "description": "",
+  "dependencies": {
+    "@tauri-apps/api": "2.0.0-alpha.5"
+  }
+}
