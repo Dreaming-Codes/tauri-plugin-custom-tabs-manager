@@ -1,13 +1,7 @@
 use serde::{Deserialize, Serialize};
 
-#[derive(Debug, Serialize)]
+#[derive(Debug, Clone, Default, Serialize)]
 #[serde(rename_all = "camelCase")]
-pub struct PingRequest {
-  pub value: Option<String>,
-}
-
-#[derive(Debug, Clone, Default, Deserialize)]
-#[serde(rename_all = "camelCase")]
-pub struct PingResponse {
-  pub value: Option<String>,
+pub struct OpenCustomTabSimpleRequest {
+  pub url: String,
 }

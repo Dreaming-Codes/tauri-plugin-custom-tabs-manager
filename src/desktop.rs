@@ -14,9 +14,7 @@ pub fn init<R: Runtime, C: DeserializeOwned>(
 pub struct CustomTabsManager<R: Runtime>(AppHandle<R>);
 
 impl<R: Runtime> CustomTabsManager<R> {
-  pub fn ping(&self, payload: PingRequest) -> crate::Result<PingResponse> {
-    Ok(PingResponse {
-      value: payload.value,
-    })
+  pub fn open_custom_tab_simple(&self, payload: OpenCustomTabSimpleRequest) -> crate::Result<()> {
+    todo!("Throw an appropriate error here")
   }
 }

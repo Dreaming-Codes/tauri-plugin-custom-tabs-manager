@@ -9,13 +9,12 @@ import app.tauri.plugin.Invoke
 
 @TauriPlugin
 class CustomTabsManagerPlugin(private val activity: Activity): Plugin(activity) {
-    private val implementation = CustomTabsManager()
+    private val implementation = CustomTabsManager(activity)
 
     @Command
-    fun ping(invoke: Invoke) {
-        val value = invoke.getString("value") ?: ""
-        val ret = JSObject()
-        ret.put("value", implementation.pong(value))
-        invoke.resolve(ret)
+    fun openCustomTabSimple(invoke: Invoke) {
+        val url = invoke.getString("url")!!
+        implementation.openCustomTabSimple(url)
+        invoke.resolve()
     }
 }

@@ -4,9 +4,9 @@ import Tauri
 import SwiftRs
 
 class CustomTabsManagerPlugin: Plugin {
-	@objc public func ping(_ invoke: Invoke) throws {
-		let value = invoke.getString("value")
-		invoke.resolve(["value": value as Any])
+	@objc public func openCustomTabSimple(_ invoke: Invoke) throws {
+		let value = invoke.getString("url")
+		invoke.resolve()
 	}
 }
 

@@ -28,10 +28,10 @@ pub fn init<R: Runtime, C: DeserializeOwned>(
 pub struct CustomTabsManager<R: Runtime>(PluginHandle<R>);
 
 impl<R: Runtime> CustomTabsManager<R> {
-  pub fn ping(&self, payload: PingRequest) -> crate::Result<PingResponse> {
+  pub fn open_custom_tab_simple(&self, payload: OpenCustomTabSimpleRequest) -> crate::Result<()> {
     self
-      .0
-      .run_mobile_plugin("ping", payload)
-      .map_err(Into::into)
+        .0
+        .run_mobile_plugin("openCustomTabSimple", payload)
+        .map_err(Into::into)
   }
 }
