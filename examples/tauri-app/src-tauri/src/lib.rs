@@ -5,6 +5,7 @@ use tauri_plugin_custom_tabs_manager::OpenCustomTabSimpleRequest;
 fn open_custom_tab_simple(app_handle: tauri::AppHandle, url: &str) {
     tauri_plugin_custom_tabs_manager::CustomTabsManagerExt::custom_tabs_manager(&app_handle).open_custom_tab_simple(OpenCustomTabSimpleRequest {
         url: url.to_string(),
+        try_native_app: true,
     }).expect("error while opening custom tab")
 }
 

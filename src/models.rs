@@ -4,4 +4,5 @@ use serde::{Deserialize, Serialize};
 #[serde(rename_all = "camelCase")]
 pub struct OpenCustomTabSimpleRequest {
   pub url: String,
+  pub try_native_app: bool,
 }
