@@ -12,3 +12,9 @@ pub struct OpenCustomTabSimpleRequest {
 pub struct MayLaunchUrlRequest {
   pub url: String
 }
+
+#[derive(Debug, Clone, Default, Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct PostMessageRequest {
+  pub message: String
+}

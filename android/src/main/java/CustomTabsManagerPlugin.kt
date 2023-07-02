@@ -33,4 +33,11 @@ class CustomTabsManagerPlugin(private val activity: Activity) : Plugin(activity)
         implementation.mayLaunchUrl(uri)
         invoke.resolve()
     }
+
+    @Command
+    fun postMessage(invoke: Invoke) {
+        val message = invoke.getString("message")!!
+        implementation.postMessage(message)
+        invoke.resolve()
+    }
 }

@@ -40,4 +40,10 @@ impl<R: Runtime> CustomTabsManager<R> {
             .run_mobile_plugin("mayLaunchUrl", payload)
             .map_err(Into::into)
     }
+    pub fn post_message(&self, payload: PostMessageRequest) -> crate::Result<()> {
+        self
+            .0
+            .run_mobile_plugin("postMessage", payload)
+            .map_err(Into::into)
+    }
 }

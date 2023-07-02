@@ -39,6 +39,10 @@ class CustomTabsManager(private val activity: Activity) {
         customTabsSession?.mayLaunchUrl(uri, null, null)
     }
 
+    fun postMessage(message: String) {
+        customTabsSession?.postMessage(message, null)
+    }
+
     fun openCustomTabSimple(uri: Uri) {
         val builder = CustomTabsIntent.Builder(customTabsSession)
         val customTabsIntent = builder.build()

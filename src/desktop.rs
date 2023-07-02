@@ -20,4 +20,7 @@ impl<R: Runtime> CustomTabsManager<R> {
     pub fn may_launch_url(&self, payload: MayLaunchUrlRequest) -> crate::Result<()> {
         todo!("Throw an appropriate error here")
     }
+    pub fn post_message(&self, payload: PostMessageRequest) -> crate::Result<()> {
+        todo!("Throw an appropriate error here")
+    }
 }
