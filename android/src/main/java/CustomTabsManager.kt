@@ -34,6 +34,10 @@ class CustomTabsManager(private val activity: Activity) {
     init {
         CustomTabsClient.bindCustomTabsService(activity, "com.android.chrome", connection)
     }
+    
+    fun mayLaunchUrl(uri: Uri) {
+        customTabsSession?.mayLaunchUrl(uri, null, null)
+    }
 
     fun openCustomTabSimple(uri: Uri) {
         val builder = CustomTabsIntent.Builder(customTabsSession)

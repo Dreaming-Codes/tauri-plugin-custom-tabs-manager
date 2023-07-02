@@ -25,4 +25,12 @@ class CustomTabsManagerPlugin(private val activity: Activity) : Plugin(activity)
         implementation.openCustomTabSimple(uri)
         invoke.resolve()
     }
+    
+    @Command
+    fun mayLaunchUrl(invoke: Invoke) {
+        val url = invoke.getString("url")!!
+        val uri = Uri.parse(url)
+        implementation.mayLaunchUrl(uri)
+        invoke.resolve()
+    }
 }
