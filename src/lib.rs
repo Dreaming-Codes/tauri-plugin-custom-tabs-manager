@@ -7,6 +7,8 @@ use std::{collections::HashMap, sync::Mutex};
 
 pub use models::*;
 
+#[cfg(desktop)]
+mod desktop;
 #[cfg(mobile)]
 mod mobile;
 
@@ -16,6 +18,8 @@ mod models;
 
 pub use error::{Error, Result};
 
+#[cfg(desktop)]
+use desktop::CustomTabsManager;
 #[cfg(mobile)]
 use mobile::CustomTabsManager;
 
@@ -40,6 +44,8 @@ pub fn init<R: Runtime>() -> TauriPlugin<R> {
     .setup(|app, api| {
       #[cfg(mobile)]
       let custom_tabs_manager = mobile::init(app, api)?;
+      #[cfg(desktop)]
+      let custom_tabs_manager = desktop::init(app, api)?;
       app.manage(custom_tabs_manager);
 
       // manage state so it is accessible by the commands
