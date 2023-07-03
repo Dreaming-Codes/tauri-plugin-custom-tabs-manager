@@ -1,7 +1,6 @@
 package codes.dreaming.plugin.CustomTabsManager
 
 import android.app.Activity
-import android.content.Intent
 import android.net.Uri
 import app.tauri.annotation.Command
 import app.tauri.annotation.TauriPlugin
@@ -12,15 +11,6 @@ import app.tauri.plugin.Invoke
 @TauriPlugin
 class CustomTabsManagerPlugin(private val activity: Activity) : Plugin(activity) {
     private val implementation = CustomTabsManager(activity)
-
-    override fun onNewIntent(intent: Intent) {
-        val uri = intent.data;
-        if (uri != null) {
-            trigger("onNewIntent", JSObject().apply {
-                put("url", uri.toString())
-            })
-        }
-    }
 
     @Command
     fun openCustomTabSimple(invoke: Invoke) {
