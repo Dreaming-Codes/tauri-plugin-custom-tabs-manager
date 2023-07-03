@@ -23,9 +23,6 @@ use desktop::CustomTabsManager;
 #[cfg(mobile)]
 use mobile::CustomTabsManager;
 
-#[derive(Default)]
-struct MyState(Mutex<HashMap<String, String>>);
-
 /// Extensions to [`tauri::App`], [`tauri::AppHandle`] and [`tauri::Window`] to access the custom-tabs-manager APIs.
 pub trait CustomTabsManagerExt<R: Runtime> {
   fn custom_tabs_manager(&self) -> &CustomTabsManager<R>;
@@ -48,8 +45,6 @@ pub fn init<R: Runtime>() -> TauriPlugin<R> {
       let custom_tabs_manager = desktop::init(app, api)?;
       app.manage(custom_tabs_manager);
 
-      // manage state so it is accessible by the commands
-      app.manage(MyState::default());
       Ok(())
     })
     .build()

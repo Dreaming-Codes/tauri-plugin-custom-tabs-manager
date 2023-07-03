@@ -1,6 +1,6 @@
-use tauri::{AppHandle, command, Runtime, State, Window};
+use tauri::{AppHandle, command, Runtime, Window};
 
-use crate::{CustomTabsManagerExt, MayLaunchUrlRequest, MyState, OpenCustomTabSimpleRequest, PostMessageRequest, Result};
+use crate::{CustomTabsManagerExt, MayLaunchUrlRequest, OpenCustomTabSimpleRequest, PostMessageRequest, Result};
 
 #[command]
 pub(crate) fn may_launch_url<R: Runtime>(
