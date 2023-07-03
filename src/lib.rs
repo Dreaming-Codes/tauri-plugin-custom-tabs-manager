@@ -40,7 +40,7 @@ impl<R: Runtime, T: Manager<R>> crate::CustomTabsManagerExt<R> for T {
 /// Initializes the plugin.
 pub fn init<R: Runtime>() -> TauriPlugin<R> {
   Builder::new("custom-tabs-manager")
-    .invoke_handler(tauri::generate_handler![commands::execute])
+    .invoke_handler(tauri::generate_handler![commands::may_launch_url, commands::open_custom_tab_simple, commands::post_message])
     .setup(|app, api| {
       #[cfg(mobile)]
       let custom_tabs_manager = mobile::init(app, api)?;
