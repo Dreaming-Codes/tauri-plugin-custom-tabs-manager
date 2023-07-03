@@ -1,4 +1,5 @@
 use serde::{Deserialize, Serialize};
+use tauri::api::ipc::Channel;
 
 #[derive(Debug, Clone, Default, Serialize)]
 #[serde(rename_all = "camelCase")]
@@ -17,4 +18,11 @@ pub struct MayLaunchUrlRequest {
 #[serde(rename_all = "camelCase")]
 pub struct PostMessageRequest {
   pub message: String
+}
+
+#[derive(Clone, Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct RegisterListenerRequest {
+  pub event: String,
+  pub channel: Channel
 }

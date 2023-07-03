@@ -24,4 +24,7 @@ impl<R: Runtime> CustomTabsManager<R> {
     pub fn post_message(&self, payload: PostMessageRequest) -> crate::Result<()> {
         Err(UnsupportedPlatform)
     }
+    pub fn register_listener(&self, payload: RegisterListenerRequest) -> crate::Result<()> {
+        Err(UnsupportedPlatform)
+    }
 }

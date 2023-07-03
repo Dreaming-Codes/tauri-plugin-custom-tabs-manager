@@ -46,4 +46,10 @@ impl<R: Runtime> CustomTabsManager<R> {
             .run_mobile_plugin("postMessage", payload)
             .map_err(Into::into)
     }
+    pub fn register_listener(&self, payload: RegisterListenerRequest) -> crate::Result<()> {
+        self
+            .0
+            .run_mobile_plugin("registerListener", payload)
+            .map_err(Into::into)
+    }
 }
