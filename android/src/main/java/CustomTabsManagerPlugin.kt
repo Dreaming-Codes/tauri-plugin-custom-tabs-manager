@@ -17,7 +17,7 @@ class CustomTabsManagerPlugin(private val activity: Activity) : Plugin(activity)
         val uri = intent.data;
         if (uri != null) {
             trigger("onNewIntent", JSObject().apply {
-                put("uri", uri.toString())
+                put("url", uri.toString())
             })
         }
     }
