@@ -23,7 +23,7 @@ pub fn run() {
 }
 ```
 ### Including into your project
-As of now, our plugin is not published on https://crates.io/ due to a bug in the latest alpha of Tauri that needs fixing before this plugin can work. This does not break compatibility with the official version of Tauri, however, and the plugin can be used in your app without worries by importing it from GitHub putting this into your Cargo.toml:
+As of now, my plugin is not published on https://crates.io/ however the plugin can be used in your app by importing it from GitHub putting this into your Cargo.toml:
 ```toml
 tauri-plugin-custom-tabs-manager = { git = "https://github.com/Dreaming-Codes/tauri-plugin-custom-tabs-manager"}
 ```
