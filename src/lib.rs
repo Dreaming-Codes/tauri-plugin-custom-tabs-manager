@@ -2,9 +2,6 @@ use tauri::{
   plugin::{Builder, TauriPlugin},
   Manager, Runtime,
 };
-
-use std::{collections::HashMap, sync::Mutex};
-
 pub use models::*;
 
 #[cfg(desktop)]

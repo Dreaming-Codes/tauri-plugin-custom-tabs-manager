@@ -1,4 +1,4 @@
-import { invoke } from "@tauri-apps/api/tauri";
+import {invoke} from "@tauri-apps/api/primitives";
 
 let greetInputEl: HTMLInputElement | null;
 let greetMsgEl: HTMLElement | null;

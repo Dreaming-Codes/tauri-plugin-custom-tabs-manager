@@ -10,15 +10,15 @@
     "tauri": "tauri"
   },
   "dependencies": {
-    "@tauri-apps/api": "^2.0.0-alpha.4",
-    "@tauri-apps/plugin-shell": "^2.0.0-alpha.0",
-    "@tauri-apps/plugin-window": "^2.0.0-alpha.0"
+    "@tauri-apps/api": "2.0.0-alpha.11",
+    "@tauri-apps/plugin-shell": "2.0.0-alpha.3",
+    "@tauri-apps/plugin-window": "2.0.0-alpha.1"
   },
   "devDependencies": {
-    "@tauri-apps/cli": "^2.0.0-alpha.9",
-    "@types/node": "^20.3.3",
+    "@tauri-apps/cli": "2.0.0-alpha.17",
+    "@types/node": "^20.8.10",
     "internal-ip": "^7.0.0",
-    "typescript": "^4.8.2",
-    "vite": "^4.2.1"
+    "typescript": "^4.9.5",
+    "vite": "^4.5.0"
   }
 }
