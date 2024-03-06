@@ -1,6 +1,6 @@
+use crate::Error::UnsupportedPlatform;
 use serde::de::DeserializeOwned;
 use tauri::{plugin::PluginApi, AppHandle, Runtime};
-use crate::Error::UnsupportedPlatform;
 
 use crate::models::*;
 
@@ -15,13 +15,16 @@ pub fn init<R: Runtime, C: DeserializeOwned>(
 pub struct CustomTabsManager<R: Runtime>(AppHandle<R>);
 
 impl<R: Runtime> CustomTabsManager<R> {
-    pub fn open_custom_tab_simple(&self, payload: OpenCustomTabSimpleRequest) -> crate::Result<()> {
+    pub fn open_custom_tab_simple(
+        &self,
+        _payload: OpenCustomTabSimpleRequest,
+    ) -> crate::Result<()> {
         Err(UnsupportedPlatform)
     }
-    pub fn may_launch_url(&self, payload: MayLaunchUrlRequest) -> crate::Result<()> {
+    pub fn may_launch_url(&self, _payload: MayLaunchUrlRequest) -> crate::Result<()> {
         Err(UnsupportedPlatform)
     }
-    pub fn post_message(&self, payload: PostMessageRequest) -> crate::Result<()> {
+    pub fn post_message(&self, _payload: PostMessageRequest) -> crate::Result<()> {
         Err(UnsupportedPlatform)
     }
 }

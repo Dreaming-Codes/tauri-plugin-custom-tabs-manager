@@ -1,0 +1,13 @@
+# Automatically generated - DO NOT EDIT!
+
+"$schema" = "../../schemas/schema.json"
+
+[[permission]]
+identifier = "allow-open-custom-tab-simple"
+description = "Enables the open_custom_tab_simple command without any pre-configured scope."
+commands.allow = ["open_custom_tab_simple"]
+
+[[permission]]
+identifier = "deny-open-custom-tab-simple"
+description = "Denies the open_custom_tab_simple command without any pre-configured scope."
+commands.deny = ["open_custom_tab_simple"]

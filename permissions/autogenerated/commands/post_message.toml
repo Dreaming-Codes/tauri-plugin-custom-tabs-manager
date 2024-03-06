@@ -1,0 +1,13 @@
+# Automatically generated - DO NOT EDIT!
+
+"$schema" = "../../schemas/schema.json"
+
+[[permission]]
+identifier = "allow-post-message"
+description = "Enables the post_message command without any pre-configured scope."
+commands.allow = ["post_message"]
+
+[[permission]]
+identifier = "deny-post-message"
+description = "Denies the post_message command without any pre-configured scope."
+commands.deny = ["post_message"]
